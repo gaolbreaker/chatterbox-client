@@ -13,7 +13,7 @@ var App = {
 
     FormView.initialize();
     RoomsView.initialize();
-    MessagesView.initialize();
+    setTimeout(MessagesView.initialize, 5000);
 
     // Fetch initial batch of messages
     App.startSpinner();
@@ -22,7 +22,7 @@ var App = {
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.
     //??use settimeout(app.fetch(??))
-    setInterval(App.fetch, 2000);
+    // setInterval(App.fetch, 2000);
   },
 
   fetch: function(callback = ()=>{}) {
